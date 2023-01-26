@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<style>
+    input[type=text] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+input[type=name]{
+  width: 100%;
+  border: none;
+ padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  background: #f1f1f1;
+}
+</style>
+<body>
+<div class="container my-3">
+    <div class="row">
+        <div class="col-md-8 mx-auto">
+            <h2>Create Register</h2>
+<form th:action="@{/save-register}" th:object = "${myRegister}" method="post" >
+                    <div class="form-row">
+                        <div class="col-md-6 form-group">
+                            <label>First Name</label>
+                            <input type="text" class="form-control" th:field="*{firstName}">
+                        </div>
+                        <div class="col-md-6 form-group">
+                            <label>Last Name</label>
+                            <input type="text" class="form-control" th:field="*{lastName}">
+                        </div>
+                        <div class="col-md-6 form-group">
+                            <label>Email</label>
+                            <input type="text" class="form-control" th:field="*{email}">
+                        </div>
+                        <div class="col-md-6 form-group">
+                            <label>Password</label>
+                            <input type="text" class="form-control" th:field="*{password}">
+                        </div>
+                        <div class="col-md-6 form-group">
+                            <label>Address</label>
+                            <input type="text" class="form-control" th:field="*{address}">
+                        </div>
+                        <div class="col-md-6 form-group">
+                            <label>Date Of Birth</label>
+                            <input type="text" class="form-control" th:field="*{dateOfBirth}">
+                        </div>
+                        <div class="col-md-6 form-group">
+                            <label>phone number</label>
+                            <input type="text" class="form-control" th:field="*{phoneNumber}">
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block mt-3">Register</button>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+</form>
+</body>
+</html>
